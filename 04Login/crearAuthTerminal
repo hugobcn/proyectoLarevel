@@ -1,0 +1,21 @@
+https://laravel.com/docs/7.x/authorization
+https://github.com/montogeek/laravel-docs-es/blob/master/authentication.md
+
+
+sudo chmod -R 777 /var/www/hugo/prLab/proyecto-laravel
+
+Command "make:auth" is not defined.  
+
+https://stackoverflow.com/questions/34545641/php-artisan-makeauth-command-is-not-defined
+
+composer require laravel/ui
+php artisan ui vue --auth
+
+composer require laravel/ui
+
+php artisan ui vue --auth
+
+
+Illuminate\Database\QueryException 
+
+SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists

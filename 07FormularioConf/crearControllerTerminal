@@ -1,0 +1,5 @@
+php artisan make:controller UserController
+
+crearCarpeta user en views:
+
+/resources/views/user
