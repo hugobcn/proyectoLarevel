@@ -2,7 +2,7 @@
 Route::post('/user/update', 'UserController@update')->name('user.update');
 
 
-/app/http/controllers/auth
+/app/http/controllers/
 
  public function update (Request $request){
         //para validar nick igual que el suyo

@@ -2,7 +2,7 @@
 Route::post('/user/update', 'UserController@update')->name('user.update');
 
 
-/app/http/controllers/auth
+/app/http/controllers/
 
 <?php
 
