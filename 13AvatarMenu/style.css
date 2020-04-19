@@ -1,0 +1,36 @@
+/public/css/
+
+
+form .avatar{
+    display: block;
+    margin-left: 25%;
+    width: 55px;
+}
+
+form .avatar2{
+    width: 55px;
+    margin-bottom:15px;
+}
+
+
+/* hacer un circulo*/
+.navbar .container-avatar2{   
+    width: 35px;
+    height: 35px;
+    border-radius: 900px;
+    overflow: hidden;
+}
+
+.navbar .container-avatar2 img{
+height: 100%;
+
+/*
+    display: block;
+  max-width:60px;
+  max-height:60px;
+  width: auto;
+  height: auto;
+  margin-left: -50%; 
+*/
+}
+
