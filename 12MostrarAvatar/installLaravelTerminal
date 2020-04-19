@@ -1,0 +1,28 @@
+https://laravel.com/docs/7.x/installation
+
+version ofical:
+ opcion1:
+
+composer global require laravel/installer
+
+laravel new blog
+
+opcion2:
+
+composer create-project --prefer-dist laravel/laravel blog
+
+composer create-project --prefer-dist laravel/laravel blog "5.6.*" --prefer-dist
+
+local devel: Local Development Server
+-------
+https://styde.net/instalar-y-actualizar-paquetes-con-composer/
+
+version: estable
+composer create-project laravel/laravel curso-laravel-styde
+
+composer create-project laravel/laravel curso-laravel-styde "6.*"
+
+
+
+Install version: (En orden ascendente de estabilidad): dev, alpha, beta, RC, y stable.
+composer create-project laravel/laravel nombre_del_proyecto --stability=beta
