@@ -1,0 +1,9 @@
+cd /var/www/hugo/prLab/twitter-laravel
+
+/var/www/hugo/prLab/twitter-laravel
+
+sudo chmod -R 777 /var/www/hugo/prLab/twitter-laravel
+
+crear carpeta vista image:
+
+/resources/views/image
