@@ -16,7 +16,7 @@
                 <div class="card-header ">
                     @if($image->user->image)
                     <div class="container-avatar2">
-                        <img  src="{{$image->user->image}}" class="avatar2"/> 
+                        <img  src="{{route('user.file',['filename'=> $image->user->image])}}" class="avatar2"/> 
                     </div>
                     @endif
                     <div class ="data-user">

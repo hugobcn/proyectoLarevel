@@ -38,7 +38,19 @@ form .avatar2{
 .pub_image .container-avatar2{
     float:left;
      margin-right:15px;
+     width: 35px;
+    height: 35px;
+    border-radius: 900px;
+    overflow: hidden;
 }
+
+.pub_image .container-avatar2 img
+{
+    height: 100%;
+    margin-left: -20%;
+    
+}
+
 .pub_image .data-user{
     font-weight: bold;
     line-height: 35px;
