@@ -1,0 +1,3 @@
+cd /var/www/hugo/prLab/twitter-laravel
+
+ php artisan make:Controller CommentController
