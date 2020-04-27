@@ -1,0 +1,40 @@
+<!-- data-id="{{$image->id}}"  para gestionar  mediante ajax-->
+<img  src="{{asset('img/heart-red.png')}}" data-id="{{$image->id}}"  class="btn-dislike"/>
+
+---JS----
+
+var url = 'http://twitter-laravel.com';
+window.addEventListener("load", function () {
+
+  ///AJAX///
+        //data('id') recoge atributo de la pagina data-id="{{$image->id}}"
+        //success:  miisage si funciona
+         $.ajax({
+            url: url+'/like/'+$(this).attr('data-id'),       //data('id'),
+            type: 'GET',
+            success: function(response){
+                 //console.log(response); datos del objeto
+                if(response.like){
+                    console.log('Ok,AJAX like publicacion');
+                }else{
+                    console.log('KO,AJAX likelizado publicacion');
+                }
+            }
+        });
+
+
+    ///AJAX///
+        //data('id') recoge atributo de la pagina data-id="{{$image->id}}"
+        //success:  miisage si funciona
+         $.ajax({
+            url: url+'/dislike/'+$(this).data('id'),     //.attr('data-id'),       //.data('id'),
+            type: 'GET',
+            success: function(response){
+                //console.log(response); datos del objeto
+                if(response.dislike){
+                    console.log('Ok,AJAX dislike publicacion');
+                }else{
+                    console.log('KO,AJAX ya dislike publicacion');
+                }
+            }
+        });
