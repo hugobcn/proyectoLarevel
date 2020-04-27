@@ -1,0 +1,20 @@
+/publics/css
+
+
+
+/*likes home.blade.php*/
+
+.likes{
+    float:left;
+    padding-left:20px;
+    padding-right: 10px;
+}
+
+.likes img{
+    width: 20px;
+}
+
+.number_likes{
+    color: gray;
+    font-size: 11px;
+}
