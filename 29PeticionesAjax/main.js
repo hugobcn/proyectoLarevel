@@ -16,7 +16,8 @@ window.addEventListener("load", function () {
         $('.btn-like').unbind('click').click(function () {
             console.log('like');
             $(this).addClass('btn-dislike').remove('btn-like');
-            $(this).attr('src', 'img/heart-red.png');
+            $(this).attr('src',url+'/img/heart-red.png');
+            //$(this).attr('src','img/heart-red.png');
             
             ///AJAX///
         //data('id') recoge atributo de la pagina data-id="{{$image->id}}"
@@ -47,8 +48,8 @@ window.addEventListener("load", function () {
         $('.btn-dislike').unbind('click').click(function () {
             console.log('dislike');
             $(this).addClass('btn-like').remove('btn-dislike');
-            $(this).attr('src', 'img/heart-black.png');
-            
+            $(this).attr('src', url+'/img/heart-black.png');
+            //$(this).attr('src','img/heart-black.png');
               ///AJAX///
         //data('id') recoge atributo de la pagina data-id="{{$image->id}}"
         //success:  miisage si funciona

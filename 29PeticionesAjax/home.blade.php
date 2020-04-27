@@ -4,7 +4,13 @@
 @extends('layouts.app')
 
 @section('content')
-  <!--chequear si usuario ha dado like imagen-->
+  
+<!-- botton comentios -->
+
+                    <div class='likes'>
+                        <!--{{var_dump($image->likes)}}-->
+                        
+                        <!--chequear si usuario ha dado like imagen-->
                          <?php $user_like = false;   ?>
                         @foreach($image->likes as $like)
                             @if($like->user->id == Auth::user()->id)
@@ -22,11 +28,9 @@
                     </div>
 
                     <div class="comments">
-                        <a href="" class="btn btn-sm btn-warning btn-comentarios">Comentarios ({{count($image->comments)}})</a>
-                        <!--contar cometarios-->
 
-                    </div>
 
-                </div>
+
+
 @endsection
 
