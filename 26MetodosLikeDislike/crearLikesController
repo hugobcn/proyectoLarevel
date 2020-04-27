@@ -1,0 +1,6 @@
+cd /var/www/hugo/prLab/twitter-laravel
+
+ php artisan make:controller LikeController
+
+sudo chmod -R 777 /var/www/hugo/prLab/twitter-laravel
+
