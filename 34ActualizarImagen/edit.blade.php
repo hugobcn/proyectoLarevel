@@ -3,11 +3,7 @@
 
 
   
-@extends('layouts.app')
-
-@section('content')
-
- {{--llamar plantilla--}}
+{{--llamar plantilla--}}
 @extends('layouts.app')
 {{--dentro del contenedor--}}
 @section('content')
@@ -18,21 +14,26 @@
             <div class="card">     
                 <div class ="card-header">Editar mi imagen</div>
                 <div class="card-body">
-                    <form method="POST" action="" enctype="multipart/form-data">
-                        @csrf
+                    <!--{{ route('image.update',$image->id) }}-->
+                   <form method="POST" action="{{ route('image.update',$image->id) }}" enctype="multipart/form-data">
+				@csrf
+                 <!-- id_imagen  -->                   
+		<input type="hidden" name="image_id" value="{{$image->id}}" />
+                              
+                        
                         <!--imagen-->
 
                         <div class="form-group row">
                             <label for="image_path" class="col-md-3 col-form-label text-md-right">Imagen</label>
                             <div class ="col-md-7">
 
-                                @if($image->user->image)
+                                @if($image->image_path)
                                 <div class="container-avatar2">
-                                    <img  src="{{route('user.file',['filename'=> $image->user->image])}}" class="avatar2"/> 
+                                   <img src ='{{route('image.file',['filename'=> $image->image_path])}}' class="avatar2"/>
                                 </div>
                                 @endif
 
-                                <input id="image_path" type="file" name="image_path" class="form-control" class="form-control @error('image_path') is-invalid @enderror" required/>
+                                <input id="image_path" type="file" name="image_path" class="form-control" />
 
                                 @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -56,7 +57,7 @@
                         <div class="form-group row">
                             <label for="description" class="col-md-3 col-form-label text-md-right">Descripcion</label>
                             <div class ="col-md-7">
-                                <textarea id="description"  name="description" class="form-control" class="form-control @error('description') is-invalid @enderror">{{$image->description}}</textarea>
+                                <textarea id="description"  name="description" class="form-control" class="form-control">{{$image->description}}</textarea>
 
                                 @error('description')
                                 <span class="invalid-feedback" role="alert">
@@ -91,8 +92,4 @@
 
 
 
-
-@endsection
-
-@endsection
 

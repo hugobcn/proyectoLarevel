@@ -21,3 +21,4 @@ Auth::routes();
 //http://twitter-laravel.com/user/avatar/15872857762019-06-16-105708.jpg
 
 Route::get('/imagen/editar/{id}', 'ImageController@edit')->name('image.edit');
+Route::post('/imagen/update/{id}', 'ImageController@update')->name('image.update');
